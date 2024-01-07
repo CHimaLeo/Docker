@@ -9,7 +9,7 @@ class HolaMundoHandler(SimpleHTTPRequestHandler):
         self.wfile.write(b'Hola Mundo desde Python')
 
 if __name__ == "__main__":
-    puerto = 8080
+    puerto = 3001
     with TCPServer(("", puerto), HolaMundoHandler) as httpd:
         print(f"Servidor en ejecución en el puerto {puerto}")
         httpd.serve_forever()

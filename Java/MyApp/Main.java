@@ -8,11 +8,11 @@ import java.net.InetSocketAddress;
 public class Main {
 
     public static void main(String[] args) throws IOException {
-        int puerto = 8080;
+        int puerto = 3003;
         HttpServer server = HttpServer.create(new InetSocketAddress(puerto), 0);
         server.createContext("/api/saludo", new HolaMundoHandler());
         server.setExecutor(null);
         server.start();
-        // System.out.println("Servidor en ejecución en el puerto " + puerto);
+        System.out.println("Servidor en ejecución en el puerto " + puerto);
     }
 }
